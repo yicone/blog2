@@ -1,0 +1,178 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+---
+
+<script is:inline src="https://d3js.org/d3.v4.min.js"></script>
+<script is:inline src="http://zalando.github.io/tech-radar/release/radar-0.7.js"
+></script>
+
+<Layout
+  title="Tech Radar"
+  description="A list of technologies I'm interested in and want to learn more about."
+  pubDate={new Date("Sep 21 2023")}
+  heroImage="/blog-placeholder-about.jpg"
+>
+  <svg id="radar"></svg>
+</Layout>
+
+<script>
+  radar_visualization({
+    svg_id: "radar",
+    width: 1450,
+    height: 1000,
+    colors: {
+      background: "#fff",
+      grid: "#bbb",
+      inactive: "#ddd",
+    },
+    title: "",
+    quadrants: [
+      { name: "Dev Tools" },
+      { name: "Infrastructure" },
+      { name: "LLM Tools" },
+      { name: "Web" },
+    ],
+    rings: [
+      { name: "ADOPT", color: "#5ba300" },
+      { name: "TRIAL", color: "#009eb0" },
+      { name: "ACCESS", color: "#c7ba00" },
+      { name: "HOLD", color: "#e09b96" },
+    ],
+    print_layout: true,
+    links_in_new_tabs: true,
+    entries: [
+      {
+        label: "LangChain",
+        quadrant: 2, // 0,1,2,3 (counting clockwise, starting from bottom right)
+        ring: 0, // 0,1,2,3 (starting from inside)
+        moved: -1, // -1 = moved out (triangle pointing down)
+        //  0 = not moved (circle)
+        //  1 = moved in  (triangle pointing up)
+      },
+      {
+        label: "One API",
+        quadrant: 2,
+        ring: 0,
+        moved: -1,
+      },
+      // begin ring 1
+      {
+        label: "Embedchain",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Dify",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Open Interpreter",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Open Assistant",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Mr.-Ranedeer-AI-Tutor",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "GPT Academic",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Document AI",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Llama Index",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "LangFuse",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Dspy",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Prompt Engine",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      {
+        label: "Gorilla",
+        quadrant: 2,
+        ring: 1,
+        moved: -1,
+      },
+      // begin ring 2
+      {
+        label: "Petals",
+        quadrant: 2,
+        ring: 2,
+        moved: -1,
+      },
+      {
+        label: "Lida",
+        quadrant: 2,
+        ring: 2,
+        moved: -1,
+      },
+      {
+        label: "Jupyter AI",
+        quadrant: 2,
+        ring: 2,
+        moved: -1,
+      },
+      {
+        label: "Pandas AI",
+        quadrant: 2,
+        ring: 2,
+        moved: -1,
+      },
+      // begin ring 3
+      {
+        label: "Flowise",
+        quadrant: 2,
+        ring: 3,
+        moved: -1,
+      },
+      {
+        label: "ChatGPT Web Share",
+        quadrant: 2,
+        ring: 3,
+        moved: -1,
+      },
+      {
+        label: "ShortGPT",
+        quadrant: 2,
+        ring: 3,
+        moved: -1,
+      },
+      // ...
+    ],
+  });
+</script>
