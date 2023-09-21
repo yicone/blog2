@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+import { getEntry } from "astro:content";
+const entry = await getEntry("stars", "stars");
+const { Content, headings } = await entry.render();
+---
+
+<Layout
+  title="Awesome Stars"
+  description="A curated list of my GitHub stars!"
+  pubDate={new Date("Sep 20 2023")}
+  heroImage="/blog-placeholder-about.jpg"
+>
+  <Content />
+</Layout>
