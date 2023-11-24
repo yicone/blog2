@@ -1,50 +1,64 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like
-				Tailwind, React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1></h1>
+      <p>This is yicone's homepage!</p>
+
+      <p>
+        <ul class="no-bullets">
+          <li>👨‍💻 19 years of professional software engineering experience.</li>
+          <li>
+            🛠️ Proficient in various technologies including Ruby on Rails,
+            Python, Java on Spring/Android, JavaScript on
+            Vue/Angular/React/Ionic/Node.js, C# on .NET.
+          </li>
+          <li>
+            🏢 Currently serving as Software Architect of Digital Sales &
+            Marketing at a large manufacturing company.
+          </li>
+          <li>
+            💼 Freelancing for a restaurant reservation startup primarily using
+            Rails 6, with additional maintenance of legacy projects in
+            Java/Spring and AngularJS.
+          </li>
+          <li>
+            🌐 Part-time managing a proejct in industrial IoT, working with
+            MQTT, Pandas, matplotlib, Time Series DB.
+          </li>
+        </ul>
+      </p>
+      <p>
+        <ul class="no-bullets">
+          <li>👨‍💻 有着 19 年的专业软件工程经验。</li>
+          <li>
+            🛠️ 熟练使用多种技术，主要包括 Python、Java on
+            Spring/Android、JavaScript on Vue/Angular/React/Ionic/Node.js、Ruby
+            on Rails、C# on .NET。
+          </li>
+          <li>🏢 目前在一家大型制造公司数字化销售与服务部门担任软件架构师。</li>
+          <li>
+            💼 为一家餐厅预订创业公司提供远程自由职业服务，主要使用 Rails
+            6，同时也负责维护其采用 Java/Spring 和 AngularJS 的遗留项目。
+          </li>
+          <li>
+            🌐 兼职管理着一个工业物联网项目, 主要采用 MQTT protocol, Pandas,
+            matplotlib, Time Series DB.
+          </li>
+        </ul>
+      </p>
+    </main>
+    <Footer />
+  </body>
 </html>
