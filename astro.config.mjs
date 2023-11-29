@@ -9,9 +9,7 @@ import NetlifyCMS from "astro-netlify-cms";
 export default defineConfig({
   site: "https://yic.one",
   integrations: [
-    mdx(),
     UnoCSS(),
-    sitemap(),
     NetlifyCMS({
       config: {
         backend: {
@@ -38,5 +36,7 @@ export default defineConfig({
         ],
       },
     }),
+    mdx(),
+    sitemap(),
   ],
 });
