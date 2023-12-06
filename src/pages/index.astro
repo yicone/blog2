@@ -8,6 +8,8 @@ const dailyToolsEntry = await getEntry("my", "daily-tools");
 const { Content: DailyToolsConetnt } = await dailyToolsEntry.render();
 const devToolsEntry = await getEntry("my", "dev-tools");
 const { Content: DevToolsConetnt } = await devToolsEntry.render();
+const devInfrastructureEntry = await getEntry("my", "dev-infrastructure");
+const { Content: DevInfrastructureConetnt } = await devInfrastructureEntry.render();
 const programmingLanguagesEntry = await getEntry("my", "programming-languages");
 const { Content: ProgrammingLanguagesContent } = await programmingLanguagesEntry.render();
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
@@ -77,8 +79,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             >
           </li>
         </ul>
+        <h2>My Favorite Tools</h2>
+        <p>Recentlly attention: <a href="#chatgpt">ChatGPT</a>, <a href="#astro">Astro</a>,  <a href="#docker-swarm">Docker Swarm</a>, <a href="#logseq">Logseq</a>, <a href="#vsc">Visual Studio Code</a></p>
         <DailyToolsConetnt />
         <DevToolsConetnt />
+        <DevInfrastructureConetnt />
         <ProgrammingLanguagesContent />
       </article>
     </main>

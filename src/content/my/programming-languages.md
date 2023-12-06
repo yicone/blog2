@@ -1,20 +1,24 @@
-## Programming Languages and their ecosystems
-### Python
+### Programming Languages and their ecosystems
+
+#### Python
+
 - [Flask](https://www.flask.com/)
 - [FastAPI](https://www.fastapi.com/)
 - [Pandas](https://www.pandas.pydata.org/)
 - [NumPy](https://www.numpy.org/)
 - [Matplotlib](https://www.matplotlib.org/)
-<!-- - [SciPy](https://www.scipy.org/) -->
-<!-- - 👀[Scikit-learn](https://www.scikit-learn.org/) -->
-<!-- - 👀[PyTorch](https://www.pytorch.org/) -->
+  <!-- - [SciPy](https://www.scipy.org/) -->
+  <!-- - 👀[Scikit-learn](https://www.scikit-learn.org/) -->
+  <!-- - 👀[PyTorch](https://www.pytorch.org/) -->
 - [Poetry](https://python-poetry.org/): Python dependency management and packaging made easy.
 - [Pyenv](https://pyenv.org/): Simple Python version management.
 - [Pytest](https://www.pytest.org/): A framework that makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.
 - [PolyFactory](https://polyfactory.litestar.dev/): Simple and powerful factories for mock data generation.
 - [Autopep8](https://www.autopep8.org/): A tool that automatically formats Python code to conform to the PEP 8 style guide.
 - [Black](https://black.readthedocs.io/): The uncompromising Python code formatter.
-### JavaScript
+
+#### JavaScript
+
 - [jQuery](https://www.jquery.com/)
 - [Bootstrap](https://www.bootstrap.com/)
 - ~~[Knockout.js](https://www.knockoutjs.com/)~~
@@ -22,9 +26,9 @@
 - [React](https://reactjs.org/)
 - [Vue.js](https://vuejs.org/)
 - [Angular](https://angular.io/)
-<!-- - [Jekyll](https://jekyllrb.com/) -->
-<!-- - [Gatsby](https://www.gastbyjs.org/) -->
--  👀[Qwik](https://qwik.builder.io/)
+  <!-- - [Jekyll](https://jekyllrb.com/) -->
+  <!-- - [Gatsby](https://www.gastbyjs.org/) -->
+- 👀[Qwik](https://qwik.builder.io/)
 - [Astro](https://www.astrobetter.com/)
 - [ECharts](https://echarts.apache.org/)
 - [Electron](https://www.electronjs.org/)
@@ -33,10 +37,10 @@
 - ~~[Yarn](https://yarnpkg.com/)~~
 - [pnpm](https://pnpm.io/)
 - ~~[Grunt](https://www.gruntjs.com/)~~
-- ~~[Gulp](https://www.gulpjs.com/)~~
+- [Gulp](https://www.gulpjs.com/)
 - [Webpack](https://www.webpack.js.org/)
 <!-- - [Rollup](https://www.rollupjs.org/) -->
--  👀[Vite](https://www.vitejs.dev/): Next Generation Frontend Tooling.
+- 👀[Vite](https://www.vitejs.dev/): Next Generation Frontend Tooling.
 - [Jest](https://www.jestjs.io/)
 - ~~[Flow](https://flow.org/)~~
 - [TypeScript](https://typescriptlang.org/)
@@ -44,17 +48,22 @@
 - [Prettier](https://www.prettier.io/)
 - ~~[CasperJS](https://github.com/casperjs/casperjs>)~~
 - [Puppeteer](https://pptr.dev/)
--  👀[Playwright](https://www.playwright.dev/)
--  👀[Cypress](https://www.cypress.io/)
-### Node.js
+- 👀[Playwright](https://www.playwright.dev/)
+- 👀[Cypress](https://www.cypress.io/)
+
+#### Node.js
+
 - [Express](https://www.expressjs.com/)
 <!-- - [NestJS](https://www.nestjs.com/) -->
 - [Koa](https://www.koa.com/)
 <!-- - [Nuxt.js](https://www.nuxtjs.com/) -->
-- [Next.js](https://www.nextjs.com/)
+- 👀[Next.js](https://www.nextjs.com/)
 - [PNPM](https://pnpm.io/): Fast, disk space efficient package manager.
+- [nodemon](https://www.npmjs.com/package/nodemon)
 - [PM2](https://www.pm2.io/): PM2 is a production process manager for Node.js applications with a built-in load balancer.
-### Java
+
+#### Java
+
 - [Spring](https://www.spring.io/)
 - [MyBatis](https://www.mybatis.org/)
 - [Maven](https://www.maven.apache.org/)
@@ -62,11 +71,15 @@
 - [Jenkins](https://www.jenkins.io/)
 - [JUnit](https://junit.org/)
 - [Mockito](https://mokito.org/)
-### Groovy
+
+#### Groovy
+
 - [Spock](https://www.spockframework.org/): The Enterprise-ready testing and specification framework.
-### Android
+
+#### Android
+
 - ~~[Android Annotations](https://github.com/androidannotations/androidannotations/)~~
--  👀[RxJava](https://www.rxjava.org/)
+- 👀[RxJava](https://www.rxjava.org/)
 - [Retrofit](https://square.github.io/retrofit/)
 - [Picasso](https://square.github.io/picasso/)
 <!-- - [OkHttp](https://square.github.io/okhttp/) -->
@@ -75,23 +88,29 @@
 - [Butter Knife](http://jakewharton.github.io/butterknife/)
 - [Cordova](https://cordova.apache.org/)
 - [Ionic](https://ionicframework.com/)
--  👀[Jetpack Compose](https://developer.android.com/jetpack/compose)
-### iOS
+- 👀[Jetpack Compose](https://developer.android.com/jetpack/compose)
+
+#### iOS
+
 - [CocoaPods](https://www.cocoapods.org/)
 - [Carthage](https://www.carthage.com/)
 - [Objective-C](https://www.objc.io/)
--  👀[Swift](https://www.swift.org/)
-### Ruby
+- 👀[Swift](https://www.swift.org/)
+
+#### Ruby
+
 - [Ruby on Rails](https://www.rubyonrails.org/)
--  👀[Sinatra](https://sinatrarb.com/)
+- 👀[Sinatra](https://sinatrarb.com/)
 - [RSpec](https://rspec.info/)
 - [Capybara](https://www.capybara.com/)
 - [Factory Bot](https://thoughtbot.com/)
 - [RuboCop](https://www.rubocop.org/): A Ruby static code analyzer and formatter, based on the community Ruby style guide.
 - [Prettier](https://github.com/prettier/plugin-ruby): Prettier Ruby Plugin.
--  👀[Sorbet](https://sorbet.org/): A fast, powerful type checker designed for Ruby.
+- 👀[Sorbet](https://sorbet.org/): A fast, powerful type checker designed for Ruby.
 - [chruby](https://github.com/postmodern/chruby/): A Ruby environment tool.
-### C#/.NET
+
+#### C#/.NET
+
 - [ASP.NET](https://www.asp.net/)
 - [Windows Forms](https://dotnet.microsoft.com/en-us/apps/desktop) (not WPF, WinUI, UWP, MAUI)
 - [Entity Framework Core](https://www.entityframeworkcore.com/)
@@ -99,3 +118,10 @@
 - [NUnit](https://www.nunit.org/)
 - [Moq](https://devlooped.com/moq)
 - [LINQPad](https://www.linqpad.net/)
+
+#### Other languages of interest
+
+- [Mojo]
+- [Golang]
+- [Kotlin]
+- [Elixir]
