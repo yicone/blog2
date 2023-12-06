@@ -48,7 +48,7 @@
 - [FaunaDB](https://www.fauna.com/) [#Serverless]()
 - 👀[Cloudflare](https://wwww.cloudflare.com/) KV [#Serverless]()
 - 👀[Cloudflare](https://www.cloudflare.com/) D1 [#Serverless]()
-- [Aliyun HiTSDB](https://www.aliyun.com/product/hitsdb): A high-performance time series database service that supports the storage and query of massive amounts of time series data. [#Project-specific]()
+- [Aliyun HiTSDB](https://www.aliyun.com/product/hitsdb): A high-performance time series database service that supports the storage and query of massive amounts of time series data. [#Project-specific]() [#Discontinued-maintenance]()
 - ~~[RethinkDB](https://www.rethinkdb.com/)~~
 
 ##### PaaS

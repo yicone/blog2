@@ -40,12 +40,14 @@
 - [Gulp](https://www.gulpjs.com/)
 - [BrowserSync](https://browsersync.io/)
 - ~~[Browserify](https://browserify.org/)~~
-- [ESBuild](https://esbuild.github.io/)
+- ~~[ESBuild](https://esbuild.github.io/)~~
 - [Webpack](https://www.webpack.js.org/)
 <!-- - [Rollup](https://www.rollupjs.org/) -->
 - 👀[Parcel](https://parceljs.org/)
 - 👀[Vite](https://www.vitejs.dev/): Next Generation Frontend Tooling.
+
 - [Jest](https://www.jestjs.io/)
+- ~~[CoffeeScript](https://www.coffeescript.org/)~~
 - ~~[Flow](https://flow.org/)~~
 - [TypeScript](https://typescriptlang.org/)
 - [ESLint](https://www.eslint.org/)
@@ -71,7 +73,7 @@
 - [Spring](https://www.spring.io/)
 - [MyBatis](https://www.mybatis.org/)
 - [Maven](https://www.maven.apache.org/)
-- [Gradle](https://www.gradle.org/)
+- [Gradle](https://www.gradle.org/) #DSL
 - [Jenkins](https://www.jenkins.io/)
 - [JUnit](https://junit.org/)
 - [Mockito](https://mokito.org/)
@@ -108,6 +110,7 @@
 - [RSpec](https://rspec.info/)
 - [Capybara](https://www.capybara.com/)
 - [Factory Bot](https://thoughtbot.com/)
+- [Rake](https://ruby.github.io/rake/)
 - [RuboCop](https://www.rubocop.org/): A Ruby static code analyzer and formatter, based on the community Ruby style guide.
 - [Prettier](https://github.com/prettier/plugin-ruby): Prettier Ruby Plugin.
 - 👀[Sorbet](https://sorbet.org/): A fast, powerful type checker designed for Ruby.
@@ -123,9 +126,22 @@
 - [Moq](https://devlooped.com/moq)
 - [LINQPad](https://www.linqpad.net/)
 
-#### Other languages of interest
+#### Bash
 
-- [Mojo]
-- [Golang]
-- [Kotlin]
-- [Elixir]
+- [Bash](https://www.gnu.org/software/bash/)
+
+#### Other languages
+
+##### Some interested
+
+- [Mojo](https://www.mojolicious.org/)
+- [Golang](https://www.golang.org/)
+- [Kotlin](https://www.kotlinlang.org/)
+- [Elixir](https://www.elixir-lang.org/)
+
+##### School days
+
+- [C](https://www.clang.org/)
+- [Visual Basic](https://wikipedia.org/wiki/Visual_Basic)
+- [ActionScript](https://wikipedia.org/wiki/ActionScript)
+- [PHP](https://www.php.net/)
