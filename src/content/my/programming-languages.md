@@ -38,8 +38,12 @@
 - [pnpm](https://pnpm.io/)
 - ~~[Grunt](https://www.gruntjs.com/)~~
 - [Gulp](https://www.gulpjs.com/)
+- [BrowserSync](https://browsersync.io/)
+- ~~[Browserify](https://browserify.org/)~~
+- [ESBuild](https://esbuild.github.io/)
 - [Webpack](https://www.webpack.js.org/)
 <!-- - [Rollup](https://www.rollupjs.org/) -->
+- 👀[Parcel](https://parceljs.org/)
 - 👀[Vite](https://www.vitejs.dev/): Next Generation Frontend Tooling.
 - [Jest](https://www.jestjs.io/)
 - ~~[Flow](https://flow.org/)~~
