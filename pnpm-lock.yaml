@@ -34,6 +34,9 @@ devDependencies:
   netlify-cms-app:
     specifier: ^2.15.72
     version: 2.15.72(@types/react@17.0.71)(graphql@15.8.0)(react-dom@16.14.0)(react@16.14.0)
+  unist-util-visit:
+    specifier: ^5.0.0
+    version: 5.0.0
   unocss:
     specifier: ^0.57.7
     version: 0.57.7(postcss@8.4.30)(vite@4.4.9)

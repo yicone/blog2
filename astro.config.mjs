@@ -1,13 +1,60 @@
-import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
+import { defineConfig } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import UnoCSS from "@unocss/astro";
 import NetlifyCMS from "astro-netlify-cms";
+import { SKIP, visit } from "unist-util-visit";
+
+/**
+ * Removes comments from the given tree.
+ *
+ * @param {Object} tree - The tree to remove comments from.
+ * @returns {Function} - A function that can be used as a plugin in a tree traversal.
+ */
+function removeComments() {
+  return (tree, file) => {
+    if (file.extname === ".mdx") {
+      visit(tree, "mdxFlowExpression", (node, index, parent) => {
+        if (node.value.startsWith("/*") && node.value.endsWith("*/")) {
+          parent.children.splice(index, 1);
+          return [SKIP, index];
+        }
+      });
+    }
+
+    visit(tree, "html", (node, index, parent) => {
+      if (node.value.startsWith("<!--") && node.value.endsWith("-->")) {
+        parent.children.splice(index, 1);
+        return [SKIP, index];
+      }
+    });
+    visit(tree, "list", (node, index, parent) => {
+      if (index > 0 && parent.children[index - 1].type === "list") {
+        parent.children[index - 1].children = parent.children[
+          index - 1
+        ].children.concat(node.children);
+        parent.children.splice(index, 1);
+        return [SKIP, index];
+      }
+    });
+  };
+}
+
+function debugAst() {
+  return (tree) => {
+    console.log(JSON.stringify(tree, null, 2));
+    // 或者将AST输出到一个文件中
+    // fs.writeFileSync('path/to/ast.json', JSON.stringify(tree, null, 2));
+  };
+}
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://yic.one",
+  markdown: {
+    remarkPlugins: [removeComments],
+  },
   integrations: [
     UnoCSS(),
     NetlifyCMS({
