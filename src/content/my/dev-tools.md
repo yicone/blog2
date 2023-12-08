@@ -35,6 +35,12 @@
 - [HTTPie](https://www.httpie.org/)
 <!-- - [GraphQL Bin](https://www.graphqlbin.com/) -->
 
+#### Testing(Language-agnostic)
+
+- [Cypress](https://www.cypress.io/)
+- 👀[Cucumber](https://cucumber.io/)
+- [Locust](https://locust.io/)
+
 #### Database Client
 
 - [DBeaver](https://www.dbeaver.io/)

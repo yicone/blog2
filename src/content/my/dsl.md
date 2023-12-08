@@ -9,9 +9,9 @@
 
 #### HTML
 
-<!-- - [Pug](https://pugjs.org/) -->
 
 - [Razor](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-5.0)
+<!-- - [Pug](https://pugjs.org/)1 -->
 - [Handlebars](https://handlebarsjs.com/)
 - [EJS](https://ejs.co/)
   <!-- - [Mustache](https://mustache.github.io/) -->
@@ -19,7 +19,7 @@
   <!-- - [Nunjucks](https://mozilla.github.io/nunjucks/) -->
   <!-- - [Twig](https://twig.symfony.com/) -->
   <!-- - [Haml](https://haml.info/) -->
-  <!-- - [Slim](https://slim-lang.com/) -->
+  <!-- - [Slim](https://slim-template.github.io/) -->
   <!-- - [Blade](https://laravel.com/docs/blade) -->
   <!-- - [Django](https://www.djangoproject.com/) -->
 - [Jinja](https://jinja.palletsprojects.com/)
@@ -31,7 +31,7 @@
 - [JSON Schema](https://json-schema.org/)
 <!-- - [JSON-LD](https://json-ld.org/)
 - [JSON5](https://json5.org/)
-- [JSONiq](https://www.jsoniq.org/)
+
 - [JSONata](https://jsonata.org/)
 - [JSON-RPC](https://www.jsonrpc.org/) -->
 
@@ -39,13 +39,11 @@
 
 - [XML](https://www.w3.org/XML/)
 - [XSLT](https://www.w3.org/TR/xslt-30/)
-- [XQuery](https://www.w3.org/TR/xquery-31/)
-- [XPath](https://www.w3.org/TR/xpath-31/)
   <!-- - [XProc](https://www.w3.org/TR/xproc/) -->
   <!-- - [XForms](https://www.w3.org/TR/xforms/) -->
-  <!-- - [XInclude](https://www.w3.org/TR/xinclude/)
-- [XLink](https://www.w3.org/TR/xlink11/)
-- [XPointer](https://www.w3.org/TR/xptr-framework/) -->
+  <!-- - [XInclude](https://www.w3.org/TR/xinclude/) -->
+  <!-- - [XLink](https://www.w3.org/TR/xlink11/) -->
+  <!-- - [XPointer](https://www.w3.org/TR/xptr-framework/)  -->
 
 #### YAML
 
@@ -55,7 +53,9 @@
 
 - [TOML](https://toml.io/)
 
-#### *x*QL
+#### Query languages
+
+https://en.wikipedia.org/wiki/Query_language
 
 - [SQL](https://www.iso.org/standard/63555.html)
 <!-- - [PL/SQL](https://docs.oracle.com/en/database/oracle/oracle-database/19/lnpls/index.html) -->
@@ -67,6 +67,10 @@
 - [GraphQL](https://graphql.org/)
 - [PRQL](https://prql-lang.org/): Pipelined Relational Query Language
 - 👀[Datalog](https://en.wikipedia.org/wiki/Datalog)
+- [XQuery](https://www.w3.org/TR/xquery-31/)
+- [XPath](https://www.w3.org/TR/xpath-31/)
+- [jq](https://stedolan.github.io/jq/)
+- 👀[JSONiq](https://www.jsoniq.org/)
 - [CodeQL](https://securitylab.github.com/tools/codeql)
 - [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 - [LokiQL](https://grafana.com/docs/loki/latest/logql/)
@@ -74,21 +78,24 @@
 #### Markdown
 
 - [Markdown](https://www.markdownguide.org/)
-- [MDX](https://mdxjs.com/)
 - [CommonMark](https://commonmark.org/)
+- [MDX](https://mdxjs.com/)
 - [GitHub Flavored Markdown](https://github.github.com/gfm/)
-- [GitBook](https://docs.gitbook.com/)
-- 👀[AsciiDoc](https://asciidoc.org/)
-<!-- - [reStructuredText](https://docutils.sourceforge.io/rst.html)
-<!-- - [Org](https://orgmode.org/) -->
+- [remark](https://remark.js.org/)
+- [Pandoc](https://pandoc.org/)
+  <!-- - [MDTest](https://github.com/michelf/mdtest/) -->
+  <!-- - [GitBook](https://docs.gitbook.com/) -->
+  <!-- - 👀[AsciiDoc](https://asciidoc.org/) -->
+  <!-- - [reStructuredText](https://docutils.sourceforge.io/rst.html)
+  <!-- - [Org](https://orgmode.org/) -->
 
-#### LaTeX
+#### TeX
 
 - [LaTeX](https://www.latex-project.org/)
-- [MathJax](https://www.mathjax.org/)
-- [KaTeX](https://katex.org/)
-- [AsciiMath](http://asciimath.org/)
-- [MathML](https://www.w3.org/Math/)
+  <!-- - [MathJax](https://www.mathjax.org/) -->
+  <!-- - [KaTeX](https://katex.org/) -->
+  <!-- - [AsciiMath](http://asciimath.org/) -->
+  <!-- - [MathML](https://www.w3.org/Math/) -->
 
 #### Graphics
 
@@ -100,10 +107,10 @@
 - [SVG](https://www.w3.org/Graphics/SVG/)
 - [Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 
-#### Web
+<!-- #### Web
 
 - [WebAssembly](https://webassembly.org/)
-- [Web Components](https://www.webcomponents.org/)
+- [Web Components](https://www.webcomponents.org/) -->
 
 <!-- - [WebRTC](https://webrtc.org/)
 - [WebGL](https://www.khronos.org/webgl/)
@@ -118,12 +125,13 @@
 #### Others
 
 - [Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
-- [glob](https://en.wikipedia.org/wiki/Glob_(programming))
-<!-- - [ONGL](https://docs.oracle.com/cd/E19798-01/821-1841/bnajh/index.html)
-- [Expression Language](https://docs.oracle.com/javaee/5/tutorial/doc/bnahq.html) -->
+- [glob](<https://en.wikipedia.org/wiki/Glob_(programming)>)
 - [Cron](https://en.wikipedia.org/wiki/Cron)
 - [Awk](https://www.gnu.org/software/gawk/manual/gawk.html)
+- [Expression Language](https://en.wikipedia.org/wiki/Jakarta_Expression_Language)
+  - [ONGL](https://en.wikipedia.org/wiki/OGNL)
+  - [SpEL](https://docs.spring.io/spring-framework/reference/core/expressions.html)
+- 👀[Protobuf](https://developers.google.com/protocol-buffers)
 - [Google Apps Script](https://developers.google.com/apps-script)
 - [Gherkin](https://cucumber.io/docs/gherkin/): A Business Readable, Domain Specific Language created especially for behavior descriptions.
-- 👀[Apache Thrift](https://thrift.apache.org/)
-- 👀[Protobuf](https://developers.google.com/protocol-buffers)
+<!-- - 👀[Apache Thrift](https://thrift.apache.org/) -->
