@@ -9,12 +9,13 @@
 - [Nginx](https://www.nginx.com/): Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy, and HTTP cache. #Self-hosted
 - SQLPad #Self-hosted
 
-##### Headless CMS
+##### CMS
 
-- ~~[Ghost](https://www.ghost.org/)~~
-- ~~[KeystoneJS](https://www.keystonejs.com/)~~
-- [Netlify CMS](https://v1.netlifycms.org/)
-<!-- - 👀[Strapi](https://www.strapi.io/) -->
+- ~~[Ghost](https://www.ghost.org/)  [#Headless]()~~
+- ~~[KeystoneJS](https://www.keystonejs.com/)  [#Headless]()~~
+- [Notion](https://www.notion.so/) + [Notion API](https://developers.notion.com/) [#Serverless]()
+- [Netlify CMS](https://v1.netlifycms.org/)  [#Headless]()
+<!-- - 👀[Strapi](https://www.strapi.io/)  [#Headless]() -->
 - 👀[Builder.io](https://www.builder.io/)
 
 ##### Observability Tools
