@@ -4,8 +4,6 @@
 
 - [Visual Studio Code](https://code.visualstudio.com/) and a lot of extensions.
 - [JetBrains](https://www.jetbrains.com/): IntelliJ IDEA, RubyMine, Android Studio.
-- [Xcode](https://xcodereleases.com/)
-- [Jupyter Notebook](https://jupyter.org/): The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.
 - [EditorConfig](https://editorconfig.org/)
 
 #### Shell & Terminal
@@ -15,10 +13,10 @@
 - [Warp](https://www.warp.dev/): Warp is a modern, Rust-based terminal with AI built in so you and your team can build great software, faster. Now available on MacOS.
 - [Fig](https://www.fig.io/): Fig adds autocomplete to your terminal.
 - [Mackup](https://github.com/lra/mackup): Keep your application settings in sync (OS X/Linux).
-- [Homebrew](https://brew.sh/): The Missing Package Manager for macOS (or Linux).
 
 #### Version Control
 
+- ~~[Subversion](https://subversion.apache.org/)~~
 - [Git](https://www.git-scm.com/)
 - [Git Extras](https://github.com/tj/git-extras): Git Extras is a repository containing useful extra git helper scripts.
 - [git-crypt](https://www.agwa.name/projects/git-crypt/)
@@ -37,17 +35,25 @@
 
 #### Testing(Language-agnostic)
 
-- [Cypress](https://www.cypress.io/)
 - 👀[Cucumber](https://cucumber.io/)
 - [Locust](https://locust.io/)
+
+#### Headless Browser
+
+- ~~[PhantomJS](https://phantomjs.org/)~~
+- ~~[CasperJS](https://github.com/casperjs/casperjs>)~~
+- [Puppeteer](https://pptr.dev/)
+- [Cypress](https://www.cypress.io/)
+- 👀[Playwright](https://www.playwright.dev/)
 
 #### Database Client
 
 - [DBeaver](https://www.dbeaver.io/)
 - [DataGrip](https://datagrip.jetbrains.com/)
 
-#### Polyglot Runtime Manager
+#### Runtime Manager(Polyglot)
 
+- [Homebrew](https://brew.sh/): The Missing Package Manager for macOS (or Linux).
 - 👀[rtx](https://github.com/jdx/rtx)
 
 #### Others

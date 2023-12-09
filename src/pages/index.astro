@@ -12,10 +12,10 @@ const devToolsEntry = await getEntry("my", "dev-tools");
 const { Content: DevToolsConetnt } = await devToolsEntry.render();
 const devInfrastructureEntry = await getEntry("my", "dev-infrastructure");
 const { Content: DevInfrastructureConetnt } =
-await devInfrastructureEntry.render();
+  await devInfrastructureEntry.render();
 const programmingLanguagesEntry = await getEntry("my", "programming-languages");
 const { Content: ProgrammingLanguagesContent } =
-await programmingLanguagesEntry.render();
+  await programmingLanguagesEntry.render();
 const dslEntry = await getEntry("my", "dsl");
 const { Content: DSLContent } = await dslEntry.render();
 ---
@@ -66,14 +66,19 @@ const { Content: DSLContent } = await dslEntry.render();
         <h2>Indie Products</h2>
         <ul>
           <li>
-            <a href="https://sharegpt.vip">ShareGPT</a>: A web app that allows
-            you to chat with GPT models.
+            <a href="https://sharegpt.vip">ShareGPT.vip</a>: A web app that
+            allows you to chat with GPT models.
           </li>
           <li>
             <a
               href="https://marketplace.visualstudio.com/items?itemName=yicone.highlight-inline-sql"
               >Highlighting Inline SQL and PRQL</a
             >: A VS Code extension that highlights inline SQL and PRQL.
+          </li>
+          <li>
+            <a href="https://www.npmjs.com/package/@yicone/vue-ganttastic"
+              >@yicone/vue-ganttastic</a
+            >: A Vue component for rendering Gantt charts.
           </li>
           <li>
             <s

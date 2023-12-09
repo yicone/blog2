@@ -1,8 +1,10 @@
 ### Development Infrastructure
 
-#### For personal use
+#### Used in Personal Projects
 
-- 🌟[Docker Swarm](https://www.docker.com/)
+- 🌟[Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Docker Swarm](https://docs.docker.com/engine/swarm/)
 - [Portainer](https://www.portainer.io/): Portainer is an open-source lightweight management UI which allows you to easily manage your Docker environments. #Self-hosted
 - [Nginx](https://www.nginx.com/): Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy, and HTTP cache. #Self-hosted
 - SQLPad #Self-hosted
@@ -51,6 +53,11 @@
 - [Aliyun HiTSDB](https://www.aliyun.com/product/hitsdb): A high-performance time series database service that supports the storage and query of massive amounts of time series data. [#Project-specific]() [#Discontinued-maintenance]()
 - ~~[RethinkDB](https://www.rethinkdb.com/)~~
 
+#### Data Visualization
+
+- [DataV](https://www.alibabacloud.com/product/datav)
+<!-- - [AntV](https://antv.vision/zh) -->
+
 ##### PaaS
 
 <!-- - [Dokku](https://www.dokku.com/)  #Self-hosted #aPaas -->
@@ -60,31 +67,92 @@
 <!-- - [Render](https://www.render.com/): Render is a unified platform to build and run all your apps and websites with free SSL, global CDN, private networks, and auto deploys from Git. -->
 - 👀[Supabase](https://www.supabase.io/): The open-source Firebase alternative. Supabase adds realtime and RESTful APIs to your existing PostgreSQL database without a single line of code. #Self-hosted
 
+##### IaaS
+
+<!-- - [DigitalOcean](https://www.digitalocean.com/) -->
+
+- [Aliyun](https://www.aliyun.com/)
+- [Vultr](https://www.vultr.com/)
+- [RackNerd](https://www.racknerd.com/)
+
 ##### CI/CD
 
 - [云效 Flow](https://www.alibabacloud.com/zh/product/apsara-deveops/flow) [#Project-specific]()
 - [GitHub Actions](https://github.com/features/actions)
 - 👀[Drone](https://www.drone.io/) #Self-hosted
 
-#### For company use
+#### Used Exclusively in Company Projects
 
 - [Kong](https://www.konghq.com/): Kong is the world's most popular open-source microservice API gateway. Use Kong to secure, manage, and orchestrate microservice APIs. #Self-hosted
 
-##### Cloud
+##### IaaS
 
-- [Huawei Cloud]()
-- [Aliyun]()
+- [Huawei Cloud](https://www.huaweicloud.com/)
 
 ##### Database
 
-- [MySQL](https://www.mysql.com/)
-- [TiDB]()
-- [Redis](https://www.redis.io/)
+- [TiDB](https://www.pingcap.com/)
 
-##### Messaging
+##### Message Queue
 
-- [RabbitMQ]()
+- [RabbitMQ](https://www.rabbitmq.com/)
+
+##### CAS
+
+- [Keycloak](https://www.keycloak.org/)
+
+##### Configuration Management
+
+- [Apollo](https://www.apolloconfig.com/)
 
 ##### CI/CD
 
 - [Jenkins](https://www.jenkins.io/)
+
+##### Container Orchestration
+
+- [Kubernetes](https://www.kubernetes.io/)
+- [Helm](https://www.helm.sh/)
+
+<!-- ##### Big Data -->
+
+<!-- - [Sqoop](https://sqoop.apache.org/) -->
+<!-- - [Flume](https://flume.apache.org/) -->
+<!-- - [Kettle](https://www.hitachivantara.com/en-us/products/data-management-analytics/pentaho-platform.html) -->
+
+<!-- - [StreamSets](https://streamsets.com/) -->
+<!-- - [Oozie](https://oozie.apache.org/) -->
+<!-- - [Airflow](https://airflow.apache.org/)
+- [Azkaban](https://azkaban.github.io/)
+- [Kafka](https://www.apache.org/kafka/)
+- [Spark](https://www.apache.org/spark/)
+- [Flink](https://www.apache.org/flink/)
+- [Hadoop](https://www.apache.org/hadoop/)
+- [Hive](https://www.apache.org/hive/)
+- [HBase](https://www.apache.org/hbase/)
+- [Phoenix](https://phoenix.apache.org/)
+- [Kylin](https://kylin.apache.org/)
+- [Druid](https://www.druid.io/)
+- [Elasticsearch](https://www.elastic.co/)
+- [ClickHouse](https://clickhouse.tech/)
+- [Presto](https://www.prestodb.io/) -->
+
+##### BI
+
+<!-- - [Superset](https://superset.apache.org/) -->
+<!-- - [Redash](https://redash.io/) -->
+<!-- - [Tableau](https://www.tableau.com/) -->
+<!-- - [Power BI](https://powerbi.microsoft.com/) -->
+<!-- - [FineBI](https://www.finebi.com/) -->
+
+- [Metabase](https://www.metabase.com/)
+- 👀[Apache Zeppelin](https://zeppelin.apache.org/)
+
+<!--
+##### Jumpserver
+
+- [Jumpserver](https://www.jumpserver.org/) -->
+
+##### Observability Tools
+
+- ~~[Zabbix](https://www.zabbix.com/)~~
