@@ -3,6 +3,8 @@ import { defineConfig } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import UnoCSS from "@unocss/astro";
+import { presetUno } from "unocss";
+import { presetDaisy } from "unocss-preset-daisy";
 import NetlifyCMS from "astro-netlify-cms";
 import { SKIP, visit } from "unist-util-visit";
 
@@ -56,7 +58,17 @@ export default defineConfig({
     remarkPlugins: [removeComments],
   },
   integrations: [
-    UnoCSS(),
+    UnoCSS({
+      presets: [
+        presetUno(),
+        presetDaisy({
+          styled: true,
+          themes: ['cupcake'],
+          darkTheme: false,
+        }),
+      ],
+      injectReset: true,
+    }),
     NetlifyCMS({
       config: {
         backend: {

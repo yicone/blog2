@@ -97,11 +97,22 @@ const { Content: DSLContent } = await dslEntry.render();
             >Logseq</a
           >, <a href="#vsc">Visual Studio Code</a>
         </p>
-        <DailyToolsConetnt />
-        <DevToolsConetnt />
-        <DevInfrastructureConetnt />
-        <ProgrammingLanguagesContent />
-        <DSLContent />
+        <div role="tablist" class="tabs tabs-bordered w-full">
+          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><DailyToolsConetnt /></div>
+
+          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" />
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"> <DevToolsConetnt /></div>
+
+          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3" />
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><DevInfrastructureConetnt /></div>
+
+          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 4" />
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><ProgrammingLanguagesContent /></div>
+
+          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 5" />
+          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><DSLContent /></div>
+        </div>
       </article>
     </main>
     <Footer />
