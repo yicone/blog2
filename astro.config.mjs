@@ -63,7 +63,7 @@ export default defineConfig({
         presetUno(),
         presetDaisy({
           styled: true,
-          themes: ['cupcake'],
+          themes: ["cupcake"],
           darkTheme: false,
         }),
       ],
