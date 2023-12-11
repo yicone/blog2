@@ -1,0 +1,16 @@
+---
+const { value, color = 'orange' } = Astro.props
+const checkedIndex = value
+---
+<div class="rating rating-xs mx-2">
+  {
+  [1, 2, 3, 4, 5].map((index) => (
+        <input
+        type="radio"
+        data-index=`${index}`
+        class:list={['mask', ' mask-star-2', `bg-${color}-400`]}
+        checked={index == checkedIndex ? "checked": undefined}
+        />
+    )
+  )}
+</div>
