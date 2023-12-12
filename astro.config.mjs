@@ -1,11 +1,9 @@
 import mdx from "@astrojs/mdx";
 import { defineConfig } from "astro/config";
-
 import sitemap from "@astrojs/sitemap";
 import UnoCSS from "@unocss/astro";
-import { presetUno } from "unocss";
-import { presetDaisy } from "unocss-preset-daisy";
-import NetlifyCMS from "astro-netlify-cms";
+
+// import NetlifyCMS from "astro-netlify-cms";
 import { SKIP, visit } from "unist-util-visit";
 
 /**
@@ -59,42 +57,47 @@ export default defineConfig({
   },
   integrations: [
     UnoCSS({
-      presets: [
-        presetUno(),
-        presetDaisy({
-          styled: true,
-          themes: ["cupcake"],
-          darkTheme: false,
-        }),
-      ],
-      injectReset: true,
+      // injectReset: true,
     }),
-    NetlifyCMS({
-      config: {
-        backend: {
-          name: "git-gateway",
-          branch: "main",
-        },
-        collections: [
-          {
-            layout: "$/layouts/BlogPost.astro",
-            name: "posts",
-            label: "Blog Posts",
-            folder: "src/content/blog",
-            create: true,
-            delete: true,
-            fields: [
-              { name: "title", widget: "string", label: "Title" },
-              { name: "description", widget: "string", label: "Description" },
-              { name: "pubDate", widget: "datetime", label: "Publish Date" },
-              { name: "heroImage", widget: "image", label: "Hero Image" },
-              { name: "tags", widget: "list", label: "Tags" },
-              { name: "body", widget: "markdown", label: "Body" },
-            ],
-          },
-        ],
-      },
-    }),
+    // NetlifyCMS({
+    //   config: {
+    //     backend: {
+    //       name: "git-gateway",
+    //       branch: "main",
+    //     },
+    //     collections: [
+    //       {
+    //         layout: "$/layouts/BlogPost.astro",
+    //         name: "posts",
+    //         label: "Blog Posts",
+    //         folder: "src/content/blog",
+    //         create: true,
+    //         delete: true,
+    //         fields: [
+    //           { name: "title", widget: "string", label: "Title" },
+    //           { name: "description", widget: "string", label: "Description" },
+    //           { name: "pubDate", widget: "datetime", label: "Publish Date" },
+    //           { name: "heroImage", widget: "image", label: "Hero Image" },
+    //           { name: "tags", widget: "list", label: "Tags" },
+    //           { name: "body", widget: "markdown", label: "Body" },
+    //         ],
+    //       },
+    //       {
+    //         name: "my",
+    //         label: "My",
+    //         folder: "src/content/my",
+    //         format: "frontmatter",
+    //         extension: "mdx",
+    //         create: true,
+    //         delete: true,
+    //         fields: [
+    //           { name: "title", widget: "string", label: "Title" },
+    //           { name: "body", widget: "markdown", label: "Body" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // }),
     mdx(),
     sitemap(),
   ],

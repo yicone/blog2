@@ -19,11 +19,15 @@
     "@unocss/astro": "^0.57.7",
     "@unocss/preset-typography": "^0.57.7",
     "@unocss/reset": "^0.57.7",
-    "astro-netlify-cms": "^0.5.4",
-    "daisyui": "^3.9.4",
-    "netlify-cms-app": "^2.15.72",
+    "daisyui": "^4.4.19",
+    "eslint-plugin-mdx": "^3.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-mdx": "^3.0.0",
     "unist-util-visit": "^5.0.0",
-    "unocss": "^0.57.7",
-    "unocss-preset-daisy": "^7.0.0"
+    "unocss": "^0.58.0",
+    "unocss-preset-daisyui": "^0.0.2"
+  },
+  "patchedDependencies": {
+    "unocss-preset-daisyui@0.0.2": "patches/unocss-preset-daisyui@0.0.2.patch"
   }
 }

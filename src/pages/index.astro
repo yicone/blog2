@@ -31,7 +31,7 @@ const { Content: DSLContent } = await dslEntry.render();
     <main>
       <h1></h1>
       <p>This is yicone's homepage!</p>
-      <article class="text-base prose prose-truegray xl:text-xl">
+      <div class="text-base prose prose-truegray xl:text-xl">
         <h2>About me</h2>
         <ul>
           <li>👨‍💻 19 years of professional software engineering experience.</li>
@@ -45,8 +45,8 @@ const { Content: DSLContent } = await dslEntry.render();
             projects in Java/Spring and AngularJS.
           </li>
           <li>
-            🌐 Undertaking an Industrial IoT project primarily using
-            MQTT protocol, Pandas, matplotlib, Time Series DB, DataV.
+            🌐 Undertaking an Industrial IoT project primarily using MQTT
+            protocol, Pandas, matplotlib, Time Series DB, DataV.
           </li>
         </ul>
         <ul>
@@ -89,24 +89,71 @@ const { Content: DSLContent } = await dslEntry.render();
             >
           </li>
         </ul>
+
         <h2>My Favorite Tools</h2>
-        <div role="tablist" class="tabs tabs-bordered w-full">
-          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
-          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><DailyToolsConetnt /></div>
+        <h3>Daily Tools</h3>
+        <DailyToolsConetnt />
 
-          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" />
-          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"> <DevToolsConetnt /></div>
+        <h3>Development Tools</h3>
+        <div role="tablist" class="tabs tabs-lifted w-full">
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab"
+            aria-label="Apps"
+            checked
+          />
+          <div
+            role="tabpanel"
+            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          >
+            <DevToolsConetnt />
+          </div>
 
-          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3" />
-          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><DevInfrastructureConetnt /></div>
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab"
+            aria-label="Infrastructure"
+          />
+          <div
+            role="tabpanel"
+            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          >
+            <DevInfrastructureConetnt />
+          </div>
 
-          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 4" />
-          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><ProgrammingLanguagesContent /></div>
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab"
+            aria-label="Programming Languages"
+          />
+          <div
+            role="tabpanel"
+            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          >
+            <ProgrammingLanguagesContent />
+          </div>
 
-          <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 5" />
-          <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><DSLContent /></div>
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab"
+            aria-label="DSL"
+          />
+          <div
+            role="tabpanel"
+            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          >
+            <DSLContent />
+          </div>
         </div>
-      </article>
+      </div>
     </main>
     <Footer />
   </body>

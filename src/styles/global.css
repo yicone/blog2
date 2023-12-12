@@ -78,7 +78,7 @@ b {
 	font-weight: 700;
 }
 a {
-	color: var(--accent);
+	color: var(--accent-current);
 }
 a:hover {
 	color: var(--accent);
@@ -160,4 +160,8 @@ ul.no-bullets {
 	/* Remove padding */
 	margin: 0;
 	/* Remove margins */
+}
+
+.tab:is(input[type='radio']) {
+	width: max-content;
 }
