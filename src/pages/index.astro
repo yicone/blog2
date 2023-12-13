@@ -24,7 +24,8 @@ const { Content: JavaScriptContent } = await javascriptEntry.render();
 const javaEntry = await getEntry("my", "lang-java");
 const { Content: JavaContent } = await javaEntry.render();
 const mobileAndDesktopEntry = await getEntry("my", "mobile-and-desktop");
-const { Content: MobileAndDesktopContent } = await mobileAndDesktopEntry.render();
+const { Content: MobileAndDesktopContent } =
+  await mobileAndDesktopEntry.render();
 const csharpEntry = await getEntry("my", "lang-csharp");
 const { Content: CSharpContent } = await csharpEntry.render();
 const rubyEntry = await getEntry("my", "lang-ruby");
@@ -111,53 +112,18 @@ const { Content: OthersContent } = await othersEntry.render();
 
         <h3>Development Tools</h3>
         <div role="tablist" class="tabs tabs-lifted w-full">
-          <input
-            type="radio"
-            name="my_tabs_1"
-            role="tab"
-            class="tab"
-            aria-label="Apps"
-            checked
-          />
-          <div
-            role="tabpanel"
-            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-          >
+          <Tab tabsName="tabs_dev_tools" title="Apps" selected="true">
             <DevToolsConetnt />
-          </div>
-
-          <input
-            type="radio"
-            name="my_tabs_1"
-            role="tab"
-            class="tab"
-            aria-label="Infrastructure"
-          />
-          <div
-            role="tabpanel"
-            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-          >
+          </Tab>
+          <Tab tabsName="tabs_dev_tools" title="Infrastructure">
             <DevInfrastructureConetnt />
-          </div>
-
-          <input
-            type="radio"
-            name="my_tabs_1"
-            role="tab"
-            class="tab"
-            aria-label="Programming Languages"
-          />
-          <div
-            role="tabpanel"
-            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-          >
-            <div role="tablist" class="tabs tabs-bordered">
+          </Tab>
+          <Tab tabsName="tabs_dev_tools" title="Programming Languages">
+            <div role="tablist" class="tabs tabs-lifted">
               <Tab tabsName="tabs_langs" title="Python" selected="true">
-                <Rating value="4" />
                 <PythonContent />
               </Tab>
               <Tab tabsName="tabs_langs" title="JavaScript/Node.js">
-                <Rating value="4" />
                 <JavaScriptContent />
               </Tab>
               <Tab tabsName="tabs_langs" title="Java">
@@ -173,35 +139,13 @@ const { Content: OthersContent } = await othersEntry.render();
                 <OthersContent />
               </Tab>
             </div>
-          </div>
-
-          <input
-            type="radio"
-            name="my_tabs_1"
-            role="tab"
-            class="tab"
-            aria-label="Mobile & Desktop"
-          />
-          <div
-            role="tabpanel"
-            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-          >
+          </Tab>
+          <Tab tabsName="tabs_dev_tools" title="Mobile & Desktop">
             <MobileAndDesktopContent />
-          </div>
-
-          <input
-            type="radio"
-            name="my_tabs_1"
-            role="tab"
-            class="tab"
-            aria-label="DSL"
-          />
-          <div
-            role="tabpanel"
-            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-          >
+          </Tab>
+          <Tab tabsName="tabs_dev_tools" title="DSL">
             <DSLContent />
-          </div>
+          </Tab>
         </div>
       </div>
     </main>
