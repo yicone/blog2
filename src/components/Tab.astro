@@ -1,0 +1,18 @@
+---
+const { tabsName, title, selected } = Astro.props;
+---
+
+<input
+  type="radio"
+  name=`${tabsName}`
+  role="tab"
+  class="tab"
+  aria-label=`${title}`
+  checked={selected ? "checked" : undefined}
+/>
+<div
+  role="tabpanel"
+  class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+>
+  <slot />
+</div>

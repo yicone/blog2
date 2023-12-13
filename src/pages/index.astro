@@ -4,6 +4,8 @@ import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Rating from "../components/Rating.astro";
+import Tab from "../components/Tab.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
 const dailyToolsEntry = await getEntry("my", "daily-tools");
@@ -13,11 +15,22 @@ const { Content: DevToolsConetnt } = await devToolsEntry.render();
 const devInfrastructureEntry = await getEntry("my", "dev-infrastructure");
 const { Content: DevInfrastructureConetnt } =
   await devInfrastructureEntry.render();
-const programmingLanguagesEntry = await getEntry("my", "programming-languages");
-const { Content: ProgrammingLanguagesContent } =
-  await programmingLanguagesEntry.render();
 const dslEntry = await getEntry("my", "dsl");
 const { Content: DSLContent } = await dslEntry.render();
+const pythonEntry = await getEntry("my", "lang-python");
+const { Content: PythonContent } = await pythonEntry.render();
+const javascriptEntry = await getEntry("my", "lang-javascript");
+const { Content: JavaScriptContent } = await javascriptEntry.render();
+const javaEntry = await getEntry("my", "lang-java");
+const { Content: JavaContent } = await javaEntry.render();
+const mobileAndDesktopEntry = await getEntry("my", "mobile-and-desktop");
+const { Content: MobileAndDesktopContent } = await mobileAndDesktopEntry.render();
+const csharpEntry = await getEntry("my", "lang-csharp");
+const { Content: CSharpContent } = await csharpEntry.render();
+const rubyEntry = await getEntry("my", "lang-ruby");
+const { Content: RubyContent } = await rubyEntry.render();
+const othersEntry = await getEntry("my", "lang-others");
+const { Content: OthersContent } = await othersEntry.render();
 ---
 
 <!doctype html>
@@ -90,6 +103,8 @@ const { Content: DSLContent } = await dslEntry.render();
           </li>
         </ul>
 
+        <div class="divider">...</div>
+
         <h2>My Favorite Tools</h2>
         <h3>Daily Tools</h3>
         <DailyToolsConetnt />
@@ -136,7 +151,42 @@ const { Content: DSLContent } = await dslEntry.render();
             role="tabpanel"
             class="tab-content bg-base-100 border-base-300 rounded-box p-6"
           >
-            <ProgrammingLanguagesContent />
+            <div role="tablist" class="tabs tabs-bordered">
+              <Tab tabsName="tabs_langs" title="Python" selected="true">
+                <Rating value="4" />
+                <PythonContent />
+              </Tab>
+              <Tab tabsName="tabs_langs" title="JavaScript/Node.js">
+                <Rating value="4" />
+                <JavaScriptContent />
+              </Tab>
+              <Tab tabsName="tabs_langs" title="Java">
+                <JavaContent />
+              </Tab>
+              <Tab tabsName="tabs_langs" title="Ruby">
+                <RubyContent />
+              </Tab>
+              <Tab tabsName="tabs_langs" title="C#/.NET">
+                <CSharpContent />
+              </Tab>
+              <Tab tabsName="tabs_langs" title="Others">
+                <OthersContent />
+              </Tab>
+            </div>
+          </div>
+
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab"
+            aria-label="Mobile & Desktop"
+          />
+          <div
+            role="tabpanel"
+            class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          >
+            <MobileAndDesktopContent />
           </div>
 
           <input
