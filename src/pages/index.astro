@@ -15,8 +15,10 @@ const { Content: DevToolsConetnt } = await devToolsEntry.render();
 const devInfrastructureEntry = await getEntry("my", "dev-infrastructure");
 const { Content: DevInfrastructureConetnt } =
   await devInfrastructureEntry.render();
-const dslEntry = await getEntry("my", "dsl");
-const { Content: DSLContent } = await dslEntry.render();
+const formatsEntry = await getEntry("my", "formats");
+const { Content: FormatsContent } = await formatsEntry.render();
+const protocolsEntry = await getEntry("my", "protocols");
+const { Content: ProtocolsContent } = await protocolsEntry.render();
 const pythonEntry = await getEntry("my", "lang-python");
 const { Content: PythonContent } = await pythonEntry.render();
 const javascriptEntry = await getEntry("my", "lang-javascript");
@@ -153,8 +155,11 @@ const { Content: OthersContent } = await othersEntry.render();
             <Tab tabsName="tabs_langs3" title="Mobile & Desktop" selected="true">
               <MobileAndDesktopContent />
             </Tab>
-            <Tab tabsName="tabs_langs3" title="DSL">
-              <DSLContent />
+            <Tab tabsName="tabs_langs3" title="Protocols">
+              <ProtocolsContent />
+            </Tab>
+            <Tab tabsName="tabs_langs3" title="Formats">
+              <FormatsContent />
             </Tab>
           </div>
       </div>
