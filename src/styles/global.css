@@ -162,9 +162,9 @@ ul.no-bullets {
 	/* Remove margins */
 }
 
-.tab:is(input[type='radio']) {
+/* .tab:is(input[type='radio']) {
 	width: max-content;
-}
+} */
 
 .rating :where(input) {
 	background-color: var(--fallback-bc, oklch(var(--bc)));

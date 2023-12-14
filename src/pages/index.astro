@@ -12,10 +12,13 @@ const dailyToolsEntry = await getEntry("my", "daily-tools");
 const { Content: DailyToolsConetnt } = await dailyToolsEntry.render();
 const devToolsEntry = await getEntry("my", "dev-tools");
 const { Content: DevToolsConetnt } = await devToolsEntry.render();
-const devInfrastructureEntry = await getEntry("my", "dev-infrastructure");
-const { Content: DevInfrastructureConetnt } =
-  await devInfrastructureEntry.render();
-const formatsEntry = await getEntry("my", "formats");
+const infraIndieEntry = await getEntry("my", "infra-indie");
+const { Content: InfraIndieConetnt } =
+  await infraIndieEntry.render();
+  const infraInCompanyEntry = await getEntry("my", "infra-in-company");
+const { Content: InfraInCompanyConetnt } =
+  await infraInCompanyEntry.render();
+const formatsEntry = await getEntry("my", "file-formats");
 const { Content: FormatsContent } = await formatsEntry.render();
 const protocolsEntry = await getEntry("my", "protocols");
 const { Content: ProtocolsContent } = await protocolsEntry.render();
@@ -117,17 +120,20 @@ const { Content: OthersContent } = await othersEntry.render();
         <DailyToolsConetnt />
 
         <h3>Development Tools</h3>
-        <div role="tablist" class="tabs tabs-lifted w-full">
+        <div role="tablist" class="tabs tabs-lifted">
           <Tab tabsName="tabs_dev_tools" title="Apps" selected="true">
             <DevToolsConetnt />
           </Tab>
-          <Tab tabsName="tabs_dev_tools" title="Infrastructure">
-            <DevInfrastructureConetnt />
+          <Tab tabsName="tabs_dev_tools" title="Infrastructure 1">
+            <InfraIndieConetnt />
+          </Tab>
+          <Tab tabsName="tabs_dev_tools" title="Infrastructure 2">
+            <InfraInCompanyConetnt />
           </Tab>
         </div>
         <h3>Programming Languages & Platforms</h3>
         <h4>Part 1</h4>
-        <div role="tablist" class="tabs tabs-lifted w-full">
+        <div role="tablist" class="tabs tabs-lifted">
             <Tab tabsName="tabs_langs" title="Python" selected="true">
               <PythonContent />
             </Tab>
