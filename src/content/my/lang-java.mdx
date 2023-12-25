@@ -4,16 +4,82 @@ title: 'Java'
 import Tag from "../../components/Tag.astro";
 import Rating from "../../components/Rating.astro";
 
-##### Web Framework
+### Backend
+
+##### Specification & Standard 
+
+- [Java SE](https://www.oracle.com/java/)
+- [Jakarta EE](https://jakarta.ee/): previously known as Java EE specifications
+
+##### SDK
+
+- [OpenJDK](https://openjdk.java.net/)
+
+##### Standard library
+
+- [Core Libraries](https://docs.oracle.com/en/java/javase/21/core/java-core-libraries1.html): The Java platform includes a collections framework and a utility library.
+
+##### Runtime
+
+- [Hotspot JVM](https://openjdk.java.net/groups/hotspot/): The Java HotSpot Virtual Machine is a core component of the Java SE platform.
+- 👀[GraalVM](https://www.graalvm.org/): A universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Kotlin, and LLVM-based languages such as C and C++.
+
+##### Language
+
+- [Java](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Groovy](https://www.groovy-lang.org/)
+- 👀[Kotlin](https://www.kotlinlang.org/)
+
+
+##### Full-stack Framework
 
 - [Spring](https://www.spring.io/)
 - [Spring Boot](https://www.spring.io/projects/spring-boot)
   {/* - [Spring Cloud](https://www.spring.io/projects/spring-cloud) */}
+- 👀[Quarkus](https://quarkus.io/)
+- 👀[Micronuat](https://micronaut.io/)
+
+##### Reactive Framework
+
+- 👀[RxJava](https://github.com/ReactiveX/RxJava/)
+- 👀[Vert.x](https://vertx.io/)
+{/* - 👀[Reactor](https://projectreactor.io/) */}
+{/* - 👀[Akka](https://akka.io/) */}
+{/* - 👀[Project Loom](https://wiki.openjdk.java.net/display/loom/Main) */}
+
+##### Microservice Framework
+
+- 👀[MicroProfile](https://microprofile.io/)
+{/* - [Helidon](https://helidon.io/) */}
+{/* - [Lagom](https://www.lagomframework.com/) */}
+{/* - [Dropwizard](https://www.dropwizard.io/) */}
+
+##### Web Framework
+
+{/* - [Javalin](https://javalin.io/) */}
+{/* - [Jooby](https://jooby.io/) */}
+{/* - [Ratpack](https://ratpack.io/) */}
+{/* - [Ninja](https://www.ninjaframework.org/) */}
+{/* - [Spark](https://sparkjava.com/) */}
+{/* - [Play](https://www.playframework.com/) */}
+{/* - [Grails](https://grails.org/) */}
 
 ##### Database Access
 
 - [MyBatis](https://www.mybatis.org/)
-- [Spring Data](https://www.spring.io/projects/spring-data)
+- [Mybatis Dynamic SQL](https://mybatis.org/mybatis-dynamic-sql/docs/introduction.html)
+{/* - [Mybatis Plus](https://baomidou.com/) */}
+- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+- [Spring Data JDBC](https://spring.io/projects/spring-data-jdbc)
+- [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc)
+- [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb)
+- [Spring Data Redis](https://spring.io/projects/spring-data-redis)
+{/* - [Spring Data Elasticsearch](https://spring.io/projects/spring-data-elasticsearch) */}
+{/* - [Spring Data Neo4j](https://spring.io/projects/spring-data-neo4j) */}
+- [Hibernate](https://hibernate.org/)
+{/* - [JOOQ](https://www.jooq.org/) */}
+- 👀[QueryDSL](https://querydsl.com/)
+- 👀[Micronuat Data](https://micronaut-projects.github.io/micronaut-data/latest/guide/)
 
 ##### Logging & Debugging & Profiling
 
@@ -58,3 +124,65 @@ import Rating from "../../components/Rating.astro";
 
 - [Gradle](https://www.gradle.org/)
 - [Maven](https://www.maven.apache.org/)
+
+#### Groovy
+
+##### Package Manager
+
+- [Grape](https://www.groovy-lang.org/grape.html)
+
+##### Testing
+
+- [Spock](https://www.spockframework.org/): The Enterprise-ready testing and specification framework. <Rating value="4" />
+
+### Client App
+
+#### Mobile(Android)
+
+{/* - 👀[RxJava](https://www.rxjava.org/) */}
+{/* - [Picasso](https://square.github.io/picasso/) */}
+{/* - [Glide](bumptech.github.io/glide/) - [Butter Knife](http://jakewharton.github.io/butterknife/) */}
+
+##### Framework
+
+- ~~[Android Annotations](https://github.com/androidannotations/androidannotations/)~~
+- 👀[Android Jetpack](https://developer.android.com/jetpack)
+
+##### Database Access
+
+{/* - [Room](https://developer.android.com/topic/libraries/architecture/room) */}
+
+- [Realm](https://realm.io/)
+  {/* - [ObjectBox](https://objectbox.io/) */}
+- [GreenDAO](https://greenrobot.org/greendao/)
+
+##### Network
+
+- [OkHttp](https://square.github.io/okhttp/)
+- [Retrofit](https://square.github.io/retrofit/)
+
+##### Data Visualization
+
+- [MPAndroidChart]()
+
+##### Dependency Injection
+
+- [Dagger](https://dagger.dev/)
+
+##### Testing
+
+- 👀[Espresso](https://developer.android.com/training/testing/espresso)
+  {/* - [Robolectric](https://robolectric.org/) */}
+
+##### Logging & Debugging & Profiling
+
+- [Timber](https://github.com/JakeWharton/timber)
+  {/* - [Stetho](https://facebook.github.io/stetho/) */}
+- [LeakCanary](https://square.github.io/leakcanary/)
+  {/* - [Flipper](https://fbflipper.com/) */}
+  {/* - [Hyperion]() */}
+
+#### Cross-platform
+
+  - 👀[Jetpack Compose for Desktop](https://www.jetbrains.com/lp/compose-multiplatform/)
+  - 👀[Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/)
