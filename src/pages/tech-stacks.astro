@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+import { getEntry } from "astro:content";
+import Tab from "../components/Tab.astro";
+
+const formatsEntry = await getEntry("my", "file-formats");
+const { Content: FormatsContent } = await formatsEntry.render();
+const protocolsEntry = await getEntry("my", "protocols");
+const { Content: ProtocolsContent } = await protocolsEntry.render();
+const pythonEntry = await getEntry("my", "lang-python");
+const { Content: PythonContent } = await pythonEntry.render();
+const javascriptEntry = await getEntry("my", "lang-javascript");
+const { Content: JavaScriptContent } = await javascriptEntry.render();
+const javaEntry = await getEntry("my", "lang-java");
+const { Content: JavaContent } = await javaEntry.render();
+const csharpEntry = await getEntry("my", "lang-csharp");
+const { Content: CSharpContent } = await csharpEntry.render();
+const rubyEntry = await getEntry("my", "lang-ruby");
+const { Content: RubyContent } = await rubyEntry.render();
+const othersEntry = await getEntry("my", "lang-others");
+const { Content: OthersContent } = await othersEntry.render();
+
+const devToolsEntry = await getEntry("my", "dev-tools");
+const { Content: DevToolsContent } = await devToolsEntry.render();
+const infraForIndieEntry = await getEntry("my", "infra-indie");
+const { Content: InfraForIndieContent } = await infraForIndieEntry.render();
+const infraInCompanyEntry = await getEntry("my", "infra-in-company");
+const { Content: InfraInCompanyContent } = await infraInCompanyEntry.render();
+---
+
+<Layout
+  title="Tech Stacks"
+  description="A list of my tech stacks for development."
+  pubDate={new Date("Sep 20 2023")}
+  heroImage="/blog-placeholder-about.jpg"
+>
+  <h3>Programming Languages & Platforms</h3>
+  <h4>Part 1</h4>
+  <div role="tablist" class="tabs tabs-lifted">
+    <Tab tabsName="tabs_langs" title="Python" selected="true">
+      <PythonContent />
+    </Tab>
+    <Tab tabsName="tabs_langs" title="JavaScript/Node.js">
+      <JavaScriptContent />
+    </Tab>
+    <Tab tabsName="tabs_langs" title="Java">
+      <JavaContent />
+    </Tab>
+  </div>
+  <h4>Part 2</h4>
+  <div role="tablist" class="tabs tabs-lifted">
+    <Tab tabsName="tabs_langs2" title="Ruby" selected="true">
+      <RubyContent />
+    </Tab>
+    <Tab tabsName="tabs_langs2" title="C#/.NET">
+      <CSharpContent />
+    </Tab>
+    <Tab tabsName="tabs_langs2" title="Others">
+      <OthersContent />
+    </Tab>
+  </div>
+
+  <h3>Development Tools</h3>
+  <div role="tablist" class="tabs tabs-lifted">
+    <Tab tabsName="tabs_dev_tools" title="Apps" selected="true">
+      <DevToolsContent />
+    </Tab>
+    <Tab tabsName="tabs_dev_tools" title="Infrastructure 1">
+      <InfraForIndieContent />
+    </Tab>
+    <Tab tabsName="tabs_dev_tools" title="Infrastructure 2">
+      <InfraInCompanyContent />
+    </Tab>
+  </div>
+</Layout>

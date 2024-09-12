@@ -1,39 +1,9 @@
 ---
-import { getEntry } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import Rating from "../components/Rating.astro";
-import Tab from "../components/Tab.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-
-const dailyToolsEntry = await getEntry("my", "daily-tools");
-const { Content: DailyToolsConetnt } = await dailyToolsEntry.render();
-const devToolsEntry = await getEntry("my", "dev-tools");
-const { Content: DevToolsConetnt } = await devToolsEntry.render();
-const infraIndieEntry = await getEntry("my", "infra-indie");
-const { Content: InfraIndieConetnt } =
-  await infraIndieEntry.render();
-  const infraInCompanyEntry = await getEntry("my", "infra-in-company");
-const { Content: InfraInCompanyConetnt } =
-  await infraInCompanyEntry.render();
-const formatsEntry = await getEntry("my", "file-formats");
-const { Content: FormatsContent } = await formatsEntry.render();
-const protocolsEntry = await getEntry("my", "protocols");
-const { Content: ProtocolsContent } = await protocolsEntry.render();
-const pythonEntry = await getEntry("my", "lang-python");
-const { Content: PythonContent } = await pythonEntry.render();
-const javascriptEntry = await getEntry("my", "lang-javascript");
-const { Content: JavaScriptContent } = await javascriptEntry.render();
-const javaEntry = await getEntry("my", "lang-java");
-const { Content: JavaContent } = await javaEntry.render();
-const csharpEntry = await getEntry("my", "lang-csharp");
-const { Content: CSharpContent } = await csharpEntry.render();
-const rubyEntry = await getEntry("my", "lang-ruby");
-const { Content: RubyContent } = await rubyEntry.render();
-const othersEntry = await getEntry("my", "lang-others");
-const { Content: OthersContent } = await othersEntry.render();
 ---
 
 <!doctype html>
@@ -62,7 +32,8 @@ const { Content: OthersContent } = await othersEntry.render();
           </li>
           <li>
             🌐 Undertaking an Industrial IoT project primarily using MQTT
-            protocol, Pandas, matplotlib, Time Series DB, Aliyun IoT Gateway, DataV.
+            protocol, Pandas, matplotlib, Time Series DB, Aliyun IoT Gateway,
+            DataV.
           </li>
         </ul>
         <ul>
@@ -111,48 +82,6 @@ const { Content: OthersContent } = await othersEntry.render();
 
         <div class="divider">...</div>
 
-        <h2>Favorite Tools</h2>
-
-        <h3>Daily Tools</h3>
-        <DailyToolsConetnt />
-
-        <h3>Development Tools</h3>
-        <div role="tablist" class="tabs tabs-lifted">
-          <Tab tabsName="tabs_dev_tools" title="Apps" selected="true">
-            <DevToolsConetnt />
-          </Tab>
-          <Tab tabsName="tabs_dev_tools" title="Infrastructure 1">
-            <InfraIndieConetnt />
-          </Tab>
-          <Tab tabsName="tabs_dev_tools" title="Infrastructure 2">
-            <InfraInCompanyConetnt />
-          </Tab>
-        </div>
-        <h3>Programming Languages & Platforms</h3>
-        <h4>Part 1</h4>
-        <div role="tablist" class="tabs tabs-lifted">
-          <Tab tabsName="tabs_langs" title="Python" selected="true">
-            <PythonContent />
-          </Tab>
-          <Tab tabsName="tabs_langs" title="JavaScript/Node.js">
-            <JavaScriptContent />
-          </Tab>
-          <Tab tabsName="tabs_langs" title="Java">
-            <JavaContent />
-          </Tab>
-        </div>
-        <h4>Part 2</h4>
-        <div role="tablist" class="tabs tabs-lifted">
-          <Tab tabsName="tabs_langs2" title="Ruby" selected="true">
-            <RubyContent />
-          </Tab>
-          <Tab tabsName="tabs_langs2" title="C#/.NET">
-            <CSharpContent />
-          </Tab>
-          <Tab tabsName="tabs_langs2" title="Others">
-            <OthersContent />
-          </Tab>
-        </div>
         <!-- <h3>Protocols & Formats</h3>
         <div role="tablist" class="tabs tabs-lifted">
           <Tab tabsName="tabs_others" title="Protocols">

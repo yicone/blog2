@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+import { getEntry } from "astro:content";
+import Tab from "../components/Tab.astro";
+
+const dailyToolsEntry = await getEntry("my", "daily-tools");
+const { Content: DailyToolsContent } = await dailyToolsEntry.render();
+---
+
+<Layout
+  title="Favorite Tools"
+  description="A list of my favorite tools for daily use."
+  pubDate={new Date("Sep 20 2023")}
+  heroImage="/blog-placeholder-about.jpg"
+>
+  <h3>Daily Tools</h3>
+  <DailyToolsContent />
+</Layout>
