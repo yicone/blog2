@@ -19,12 +19,12 @@
     "@unocss/astro": "^0.57.7",
     "@unocss/preset-typography": "^0.57.7",
     "@unocss/reset": "^0.57.7",
-    "daisyui": "^4.4.19",
+    "daisyui": "^4.12.10",
     "eslint-plugin-mdx": "^3.0.0",
     "remark-frontmatter": "^5.0.0",
     "remark-mdx": "^3.0.0",
     "unist-util-visit": "^5.0.0",
-    "unocss": "^0.58.0",
+    "unocss": "^0.62.3",
     "unocss-preset-daisyui": "^0.0.2"
   },
   "patchedDependencies": {
