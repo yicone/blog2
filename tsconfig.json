@@ -2,5 +2,13 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strictNullChecks": true
+  },
+  // https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx
+  "mdx": {
+    // remark syntax plugins
+    "plugins": [
+      "remark-frontmatter",
+      "remark-mdx",
+    ]
   }
 }
