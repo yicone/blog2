@@ -1,0 +1,160 @@
+---
+title: 'Aligning Widget and Website UI: A Practical Guide for React Apps'
+description: 'A phased, low-risk strategy to align an embedded widget with a Mantine-themed React site using shared design tokens and selective component reuse.'
+pubDate: 'Oct 17 2025'
+heroImage: '/align-widget-website-ui-consistency-hero.png'
+---
+
+When an embedded widget and the main website look like they belong to different products, users feel the disconnect immediately. Inconsistent typography, spacing, and component behavior erode trust—especially in tight, embedded contexts where every pixel counts. This guide outlines a pragmatic, low‑risk path to bring your widget into visual and interaction parity with a Mantine‑themed React website, based on a real exploration of options including component reuse, design tokens, and migration trade‑offs.
+
+## Why Consistency Matters
+
+- Brand continuity: Shared colors, type, and motion reinforce product identity.
+- Lower cognitive load: Familiar patterns make embedded flows feel native.
+- Fewer surprises: Predictable components reduce QA churn and support tickets.
+- Easier scaling: Consistency enables shared tooling, docs, and reuse.
+
+## The Context
+
+- Website stack: React + Mantine v8, theme‑driven design system.
+- Widget stack: React + Tailwind utilities and ad‑hoc styles.
+- Goal: Make the widget match the site’s look and feel without bloating bundles or tightly coupling release cycles.
+- Constraint: The widget must remain embeddable and resilient across host environments.
+
+## Four Realistic Paths
+
+### 1) Reuse Website Components Directly
+
+Import the site’s React components (e.g., `*.Client.tsx`) and render them inside the widget.
+
+Pros
+- Pixel‑perfect parity on day one.
+- Minimal duplication; UI and logic evolve together.
+
+Cons
+- Tight coupling: Website refactors can break the widget.
+- Dependency drag: Pulls in Mantine, Emotion, and site‑specific context.
+- Styling conflicts: Global resets and fonts may clash with hosts.
+- Release friction: Cross‑repo versioning and CI coordination get messy.
+
+Best for teams with a single monorepo, stable component contracts, and tolerance for shared release cycles.
+
+### 2) Share Design Tokens via CSS Variables
+
+Extract brand primitives—colors, spacing, typography, radii, shadows—into a shared package (e.g., `@org/design-tokens`) and consume them from both site and widget. Keep the widget’s component library (Tailwind), but drive it with the same tokens.
+
+Pros
+- Fast visual parity with minimal churn.
+- Decoupled implementations: Mantine and Tailwind can coexist.
+- Lightweight: CSS variables are tiny and themeable (including dark mode).
+
+Cons
+- Behavior may still differ if components aren’t unified.
+- 80/20 effect: Close match, not identical, unless primitives align deeply.
+
+Great for quick wins and orgs that want consistency without a full component migration.
+
+### 3) Migrate the Widget to Mantine
+
+Add Mantine v8 to the widget, wrap with `MantineProvider`, and refactor critical views using Mantine components. Map the theme to your shared tokens for site‑level parity.
+
+Pros
+- Near‑perfect parity and interaction consistency.
+- Unified mental model for designers and engineers.
+- Easier long‑term maintenance with shared docs and patterns.
+
+Cons
+- Refactor cost: Replace Tailwind‑based UI carefully.
+- Bundle impact: Introduces Mantine and Emotion runtime.
+- Embedding considerations: Scope styles and avoid global bleed‑through.
+
+Ideal for medium‑term consolidation with strong ROI on maintainability and UX.
+
+### 4) Remote UI Libraries / Module Federation
+
+Publish a shared UI library (e.g., `@org/ui`) consumed by both site and widget—or load remote components via module federation.
+
+Pros
+- Reuse at scale with versioned stability.
+- Enables a real design system with controlled distribution.
+
+Cons
+- Operational overhead: Versioning, peer deps, build configs.
+- Federation adds complexity and is overkill for many teams.
+
+Best for mature platforms with multiple apps sharing a component set.
+
+## Recommended Strategy: Phase It In
+
+A two‑phase approach balances speed, stability, and developer experience.
+
+### Phase 1: Share Tokens for Fast Visual Parity
+
+1) Extract tokens into `@org/design-tokens` exporting CSS variables:
+   - Colors: `--brand-primary`, `--bg`, `--text`
+   - Typography: `--font-sans`, `--font-size-body`, `--line-height`
+   - Spacing/radii/shadows: standardized scales like `--space-2`, `--radius-md`
+2) Theme support: Provide light/dark sets, toggled by `data-theme` on `:root` or a wrapper.
+3) Tailwind mapping: In `tailwind.config.js`, map to `var(--...)` for colors, spacing, fonts.
+4) Normalize styles: Align base typography and resets with the website (without leaking to hosts).
+5) Target the 80/20: Align color, type, spacing, and radii on high‑impact screens first.
+
+Result: Immediate visual cohesion with minimal risk, no hard coupling, and small footprint.
+
+### Phase 2: Adopt Mantine Where It Counts
+
+1) Add dependencies: `@mantine/core`, `@mantine/hooks`, `@mantine/notifications`, `@emotion/react`, `@emotion/styled`.
+2) Theme bridge: Create a widget‑local `ThemeProvider` that reads tokens and generates a `MantineThemeOverride` (palette, fonts, radius, headings).
+3) Refactor high‑visibility components: Replace bespoke UI with Mantine (`Button`, `Stack`, `Card`, `Text`, `Tabs`).
+4) Scope styles: Wrap the root with `MantineProvider`; avoid global resets that affect the host page.
+5) Migrate gradually: Convert key views first; keep the rest on Tailwind temporarily—tokens maintain visual parity.
+
+Result: Near‑perfect parity in critical flows, unified behavior, and easier long‑term maintenance.
+
+## Practical Implementation Notes
+
+- Tokens package
+  - Publish `dist/tokens.css` and a small JS helper to toggle themes.
+  - Namescope variables (e.g., `--uc-...`) to prevent collisions.
+- Widget consumption
+  - Import tokens early (entry or layout).
+  - Use a wrapper element (`<div data-theme="light">`) so hosts can’t override your root.
+- Tailwind alignment
+  - Update `theme.extend` to reference `var(--uc-...)`.
+  - Replace hardcoded hex and arbitrary spacing with tokens.
+- Mantine theme
+  - Map tokens to Mantine’s palette and typography.
+  - Consider disabling double normalizations if you already ship a base reset.
+- Dark mode
+  - Drive via a single attribute switch; keep Mantine color scheme in sync.
+- Embedding hygiene
+  - Avoid leaking resets; confine styles under a predictable root node.
+
+## Testing and Rollout
+
+- Visual baselines: Capture before/after screenshots of key flows.
+- Stories/previews: Compare Mantine vs. Tailwind versions side‑by‑side.
+- Accessibility: Verify contrast and focus states post‑tokenization.
+- Performance: Measure bundle impact; tree‑shake Mantine imports.
+- Staged release: Ship tokens first, then migrate one view at a time.
+
+## Common Pitfalls
+
+- Leaking resets that hijack host typography.
+- Half‑mapped tokens—colors shift but spacing/type don’t, leaving things “off.”
+- Theme drift—Mantine theme and CSS variables diverge; generate both from a single source.
+- Over‑coupling—importing app‑specific site components without shared versioning discipline.
+
+## The Payoff
+
+By starting with shared design tokens and then selectively adopting Mantine, you get:
+
+- A cohesive, branded look that matches the main site.
+- Faster iteration without brittle cross‑repo coupling.
+- A path to true reuse if/when a shared `@org/ui` library makes sense.
+
+## Final Thoughts
+
+UI consistency isn’t a single decision—it’s a sequence. Start with the foundation (tokens), align the basics (colors, type, spacing), then elevate the experience with shared component behavior where it matters most. Whether you stop at token sharing or go all‑in on a unified component system, the key is phasing: deliver value early, minimize risk, and keep the door open for deeper integration as the product evolves.
+
+{/* If you want this tailored for a developer audience with code snippets (Tailwind config, Mantine theme overrides), I can add concrete examples and file references on request. */}
