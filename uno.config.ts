@@ -1,5 +1,5 @@
-import { defineConfig, presetUno, presetTypography } from "unocss";
-import presetDaisy from "unocss-preset-daisyui";
+import { defineConfig, presetUno, presetTypography } from 'unocss';
+import presetDaisy from 'unocss-preset-daisyui';
 
 export default defineConfig({
   presets: [
@@ -7,7 +7,7 @@ export default defineConfig({
     presetTypography(),
     presetDaisy({
       styled: true,
-      themes: ["cupcake"],
-    }),
-  ],
+      themes: ['nord', 'cupcake']
+    })
+  ]
 });
