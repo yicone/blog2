@@ -22,7 +22,7 @@ const posts = (await getCollection('blog'))
     <Header title={SITE_TITLE} />
     <main class="container mx-auto px-4 max-w-6xl">
       <!-- Hero Section -->
-      <div class="hero py-12 bg-base-100 mb-12 rounded-box">
+      <div class="hero py-12 mb-12">
         <div
           class="hero-content flex-col lg:flex-row-reverse gap-12 items-center"
         >
@@ -41,7 +41,9 @@ const posts = (await getCollection('blog'))
               the tools I use.
             </p>
             <div class="flex gap-4 not-prose">
-              <a href="/about" class="btn btn-primary">More About Me</a>
+              <a href="/about" class="btn btn-primary text-primary-content"
+                >More About Me</a
+              >
               <a href="/tech-stacks" class="btn btn-outline">My Tech Stack</a>
             </div>
           </div>
