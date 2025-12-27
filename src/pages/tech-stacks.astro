@@ -1,37 +1,37 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
-import { getEntry } from "astro:content";
-import Tab from "../components/Tab.astro";
+import Layout from '../layouts/BlogPost.astro';
+import { getEntry, render } from 'astro:content';
+import Tab from '../components/Tab.astro';
 
-const formatsEntry = await getEntry("my", "file-formats");
-const { Content: FormatsContent } = await formatsEntry.render();
-const protocolsEntry = await getEntry("my", "protocols");
-const { Content: ProtocolsContent } = await protocolsEntry.render();
-const pythonEntry = await getEntry("my", "lang-python");
-const { Content: PythonContent } = await pythonEntry.render();
-const javascriptEntry = await getEntry("my", "lang-javascript");
-const { Content: JavaScriptContent } = await javascriptEntry.render();
-const javaEntry = await getEntry("my", "lang-java");
-const { Content: JavaContent } = await javaEntry.render();
-const csharpEntry = await getEntry("my", "lang-csharp");
-const { Content: CSharpContent } = await csharpEntry.render();
-const rubyEntry = await getEntry("my", "lang-ruby");
-const { Content: RubyContent } = await rubyEntry.render();
-const othersEntry = await getEntry("my", "lang-others");
-const { Content: OthersContent } = await othersEntry.render();
+const formatsEntry = await getEntry('my', 'file-formats');
+const { Content: FormatsContent } = await render(formatsEntry);
+const protocolsEntry = await getEntry('my', 'protocols');
+const { Content: ProtocolsContent } = await render(protocolsEntry);
+const pythonEntry = await getEntry('my', 'lang-python');
+const { Content: PythonContent } = await render(pythonEntry);
+const javascriptEntry = await getEntry('my', 'lang-javascript');
+const { Content: JavaScriptContent } = await render(javascriptEntry);
+const javaEntry = await getEntry('my', 'lang-java');
+const { Content: JavaContent } = await render(javaEntry);
+const csharpEntry = await getEntry('my', 'lang-csharp');
+const { Content: CSharpContent } = await render(csharpEntry);
+const rubyEntry = await getEntry('my', 'lang-ruby');
+const { Content: RubyContent } = await render(rubyEntry);
+const othersEntry = await getEntry('my', 'lang-others');
+const { Content: OthersContent } = await render(othersEntry);
 
-const devToolsEntry = await getEntry("my", "dev-tools");
-const { Content: DevToolsContent } = await devToolsEntry.render();
-const infraForIndieEntry = await getEntry("my", "infra-indie");
-const { Content: InfraForIndieContent } = await infraForIndieEntry.render();
-const infraInCompanyEntry = await getEntry("my", "infra-in-company");
-const { Content: InfraInCompanyContent } = await infraInCompanyEntry.render();
+const devToolsEntry = await getEntry('my', 'dev-tools');
+const { Content: DevToolsContent } = await render(devToolsEntry);
+const infraForIndieEntry = await getEntry('my', 'infra-indie');
+const { Content: InfraForIndieContent } = await render(infraForIndieEntry);
+const infraInCompanyEntry = await getEntry('my', 'infra-in-company');
+const { Content: InfraInCompanyContent } = await render(infraInCompanyEntry);
 ---
 
 <Layout
   title="Tech Stacks"
   description="A list of my tech stacks for development."
-  pubDate={new Date("Sep 20 2023")}
+  pubDate={new Date('Sep 20 2023')}
   heroImage="/blog-placeholder-about.jpg"
 >
   <h3>Programming Languages & Platforms</h3>
