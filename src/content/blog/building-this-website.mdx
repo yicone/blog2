@@ -1,0 +1,52 @@
+---
+title: 'Building This Website with Astro v5'
+description: 'A look under the hood of my new personal website, built with Astro, UnoCSS, and Cloudflare Pages.'
+pubDate: 'Dec 28 2024'
+heroImage: '/blog-placeholder-3.jpg'
+---
+
+I recently decided to revitalize my personal website, which had been neglecting for quite some time. The goal was to create a fast, maintainable, and modern site where I could share my thoughts and projects.
+
+## The Stack
+
+Here is the tech stack I chose for this regeneration:
+
+- **[Astro](https://astro.build/):** The web framework for content-driven websites. I upgraded to the latest **Astro v5**, which introduces the powerful Content Layer API.
+- **[UnoCSS](https://unocss.dev/):** The instant on-demand atomic CSS engine. It's incredibly fast and flexible.
+- **[DaisyUI](https://daisyui.com/):** A component library for Tailwind CSS (which UnoCSS supports via preset). It provides beautiful pre-made components like the navbar and cards.
+- **[Cloudflare Pages](https://pages.cloudflare.com/):** For hosting. It's fast, free for personal use, and integrates perfectly with GitHub.
+
+## Why Astro v5?
+
+Astro's "Island Architecture" is a game-changer for performance. It strips away unused JavaScript, shipping mostly HTML to the browser.
+
+With **Astro v5**, the new **Content Layer API** makes managing content collections even easier. I can define my blog posts using a simple schema and load them from the file system using the glob loader.
+
+```typescript
+// src/content.config.ts
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    pubDate: z.coerce.date()
+    // ...
+  })
+});
+```
+
+## Styling with UnoCSS & DaisyUI
+
+I used to struggle with CSS, but utility-first CSS changed that. UnoCSS takes it a step further by generating only the CSS you actually use.
+
+DaisyUI adds a layer of abstraction on top, giving me semantic class names like `btn`, `card`, and `navbar`. This speeds up development significantly without sacrificing customization.
+
+## Deployment
+
+Deploying to Cloudflare Pages was a breeze. I simply connected my GitHub repository, and Cloudflare automatically detects the Astro framework. Now, every time I push to `main`, my site is automatically rebuilt and deployed globally.
+
+## What's Next?
+
+I plan to add more content, including my tech radar and some more deep dives into the technologies I use daily. Stay tuned!
