@@ -1,15 +1,16 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+import Layout from '../layouts/BlogPost.astro';
 ---
 
 <script is:inline src="https://d3js.org/d3.v4.min.js"></script>
-<script is:inline src="http://zalando.github.io/tech-radar/release/radar-0.7.js"
-></script>
+<script
+  is:inline
+  src="https://zalando.github.io/tech-radar/release/radar-0.7.js"></script>
 
 <Layout
   title="Tech Radar"
   description="A list of technologies I'm interested in and want to learn more about."
-  pubDate={new Date("Sep 21 2023")}
+  pubDate={new Date('Sep 21 2023')}
   heroImage="/blog-placeholder-about.jpg"
 >
   <svg id="radar"></svg>
@@ -17,162 +18,162 @@ import Layout from "../layouts/BlogPost.astro";
 
 <script>
   radar_visualization({
-    svg_id: "radar",
+    svg_id: 'radar',
     width: 1450,
     height: 1000,
     colors: {
-      background: "#fff",
-      grid: "#bbb",
-      inactive: "#ddd",
+      background: '#fff',
+      grid: '#bbb',
+      inactive: '#ddd'
     },
-    title: "",
+    title: '',
     quadrants: [
-      { name: "Dev Tools" },
-      { name: "Infrastructure" },
-      { name: "LLM Tools" },
-      { name: "Web" },
+      { name: 'Dev Tools' },
+      { name: 'Infrastructure' },
+      { name: 'LLM Tools' },
+      { name: 'Web' }
     ],
     rings: [
-      { name: "ADOPT", color: "#5ba300" },
-      { name: "TRIAL", color: "#009eb0" },
-      { name: "ACCESS", color: "#c7ba00" },
-      { name: "HOLD", color: "#e09b96" },
+      { name: 'ADOPT', color: '#5ba300' },
+      { name: 'TRIAL', color: '#009eb0' },
+      { name: 'ACCESS', color: '#c7ba00' },
+      { name: 'HOLD', color: '#e09b96' }
     ],
     print_layout: true,
     links_in_new_tabs: true,
     entries: [
       {
-        label: "LangChain",
+        label: 'LangChain',
         quadrant: 2, // 0,1,2,3 (counting clockwise, starting from bottom right)
         ring: 0, // 0,1,2,3 (starting from inside)
-        moved: -1, // -1 = moved out (triangle pointing down)
+        moved: -1 // -1 = moved out (triangle pointing down)
         //  0 = not moved (circle)
         //  1 = moved in  (triangle pointing up)
       },
       {
-        label: "One API",
+        label: 'One API',
         quadrant: 2,
         ring: 0,
-        moved: -1,
+        moved: -1
       },
       // begin ring 1
       {
-        label: "Embedchain",
+        label: 'Embedchain',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Dify",
+        label: 'Dify',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Open Interpreter",
+        label: 'Open Interpreter',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Open Assistant",
+        label: 'Open Assistant',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Mr.-Ranedeer-AI-Tutor",
+        label: 'Mr.-Ranedeer-AI-Tutor',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "GPT Academic",
+        label: 'GPT Academic',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Document AI",
+        label: 'Document AI',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Llama Index",
+        label: 'Llama Index',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "LangFuse",
+        label: 'LangFuse',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Dspy",
+        label: 'Dspy',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Prompt Engine",
+        label: 'Prompt Engine',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Gorilla",
+        label: 'Gorilla',
         quadrant: 2,
         ring: 1,
-        moved: -1,
+        moved: -1
       },
       // begin ring 2
       {
-        label: "Petals",
+        label: 'Petals',
         quadrant: 2,
         ring: 2,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Lida",
+        label: 'Lida',
         quadrant: 2,
         ring: 2,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Jupyter AI",
+        label: 'Jupyter AI',
         quadrant: 2,
         ring: 2,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "Pandas AI",
+        label: 'Pandas AI',
         quadrant: 2,
         ring: 2,
-        moved: -1,
+        moved: -1
       },
       // begin ring 3
       {
-        label: "Flowise",
+        label: 'Flowise',
         quadrant: 2,
         ring: 3,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "ChatGPT Web Share",
+        label: 'ChatGPT Web Share',
         quadrant: 2,
         ring: 3,
-        moved: -1,
+        moved: -1
       },
       {
-        label: "ShortGPT",
+        label: 'ShortGPT',
         quadrant: 2,
         ring: 3,
-        moved: -1,
-      },
+        moved: -1
+      }
       // ...
-    ],
+    ]
   });
 </script>
