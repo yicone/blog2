@@ -4,6 +4,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <!doctype html>
@@ -15,75 +21,107 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <h1></h1>
-      <p>Welcome to yicone's homepage!</p>
-      <div class="text-base prose prose-truegray xl:text-xl">
-        <h2>About me</h2>
-        <ul>
-          <li>👨‍💻 20+ years of professional software engineering experience.</li>
-          <li>
-            🏢 Software Architect focusing on Digital Sales & Marketing at a
-            large manufacturing company.
-          </li>
-          <li>
-            🛠️ Full-stack developer proficient in Python, Java, Ruby,
-            JavaScript/TypeScript, and modern web frameworks.
-          </li>
-          <li>
-            🤖 Enthusiastic about AI/LLM technologies and their practical
-            applications in software development.
-          </li>
-        </ul>
-        <ul>
-          <li>👨‍💻 20+ 年专业软件工程经验。</li>
-          <li>🏢 在一家大型制造公司担任软件架构师，专注于数字化销售与服务。</li>
-          <li>
-            🛠️ 全栈开发者，精通 Python、Java、Ruby、JavaScript/TypeScript 及现代
-            Web 框架。
-          </li>
-          <li>🤖 热衷于 AI/LLM 技术及其在软件开发中的实际应用。</li>
-        </ul>
+      <div class="prose prose-lg max-w-none">
+        <!-- Hero Section -->
+        <div class="hero py-8">
+          <div class="hero-content flex-col lg:flex-row-reverse gap-8">
+            <img
+              src="/blog-placeholder-about.jpg"
+              class="max-w-sm rounded-lg shadow-2xl w-full lg:w-1/3"
+              alt="Yicone"
+            />
+            <div class="lg:w-2/3">
+              <h1 class="text-4xl font-bold mb-4">Hello, I'm Yicone 👋</h1>
+              <p class="text-xl opacity-90 mb-6">
+                A Software Architect and Full-stack Developer passionate about
+                building elegant solutions. I write about code, architecture,
+                and the tools I use.
+              </p>
+              <div class="flex gap-4">
+                <a href="/about" class="btn btn-primary">More About Me</a>
+                <a href="/tech-stacks" class="btn btn-outline">My Tech Stack</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div class="divider">...</div>
+        <div class="divider"></div>
 
-        <h2>Indie Products</h2>
-        <ul>
-          <li>
-            <a href="https://sharegpt.vip">ShareGPT.vip</a>: A web app that
-            allows you to chat with GPT models.
-          </li>
-          <li>
+        <!-- Latest Posts Section -->
+        <section class="my-12">
+          <h2 class="text-2xl font-bold mb-6 flex justify-between items-end">
+            <span>Latest Posts</span>
             <a
-              href="https://marketplace.visualstudio.com/items?itemName=yicone.highlight-inline-sql"
-              >Highlighting Inline SQL and PRQL</a
-            >: A VS Code extension that highlights inline SQL and PRQL.
-          </li>
-          <!-- <li>
-            <a href="https://www.npmjs.com/package/@yicone/vue-ganttastic"
-              >@yicone/vue-ganttastic</a
-            >: A Vue component for rendering Gantt charts.
-          </li> -->
-          <li>
-            <s
-              ><a
-                href="https://marketplace.visualstudio.com/items?itemName=YiconeWong.yUMLExtension"
-                >yUML Extension for Visual Studio</a
-              ></s
+              href="/blog"
+              class="text-base font-normal link link-hover opacity-70"
+              >View all &rarr;</a
             >
-          </li>
-        </ul>
+          </h2>
+          <div class="grid gap-6 md:grid-cols-3">
+            {
+              posts.map((post) => (
+                <a
+                  href={`/blog/${post.id}/`}
+                  class="card bg-base-100 shadow-md hover:shadow-xl transition-all no-underline"
+                >
+                  <figure>
+                    <img
+                      src={post.data.heroImage}
+                      alt={post.data.title}
+                      class="h-48 w-full object-cover"
+                    />
+                  </figure>
+                  <div class="card-body p-4">
+                    <h3 class="card-title text-lg m-0 mb-2 leading-tight">
+                      {post.data.title}
+                    </h3>
+                    <p class="text-sm opacity-70 m-0">
+                      <FormattedDate date={post.data.pubDate} />
+                    </p>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
+        </section>
 
-        <div class="divider">...</div>
+        <div class="divider"></div>
 
-        <!-- <h3>Protocols & Formats</h3>
-        <div role="tablist" class="tabs tabs-lifted">
-          <Tab tabsName="tabs_others" title="Protocols">
-            <ProtocolsContent />
-          </Tab>
-          <Tab tabsName="tabs_others" title="Formats">
-            <FormatsContent />
-          </Tab>
-        </div> -->
+        <!-- Indie Products Section -->
+        <section class="my-12">
+          <h2 class="text-2xl font-bold mb-6">Indie Products</h2>
+          <div class="grid gap-4">
+            <div class="card bg-base-100 shadow-sm border border-base-200">
+              <div class="card-body">
+                <h3 class="card-title text-xl">
+                  <a
+                    href="https://sharegpt.vip"
+                    target="_blank"
+                    class="no-underline hover:text-primary"
+                  >
+                    ShareGPT.vip
+                  </a>
+                </h3>
+                <p>A web app that allows you to chat with GPT models.</p>
+              </div>
+            </div>
+
+            <div class="card bg-base-100 shadow-sm border border-base-200">
+              <div class="card-body">
+                <h3 class="card-title text-xl">
+                  <a
+                    href="https://marketplace.visualstudio.com/items?itemName=yicone.highlight-inline-sql"
+                    target="_blank"
+                    class="no-underline hover:text-primary"
+                  >
+                    Highlighting Inline SQL and PRQL
+                  </a>
+                </h3>
+                <p>A VS Code extension that highlights inline SQL and PRQL.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <Footer />
